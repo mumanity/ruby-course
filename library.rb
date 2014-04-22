@@ -20,9 +20,11 @@ end
 class Library
   def initialize(name)
     @books = []
+    @books.push(name)
   end
 
   def books
+    @books
   end
 
   def add_book(title, author)
