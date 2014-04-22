@@ -1,11 +1,12 @@
 
 class Book
-  attr_reader :author, :title, :id, :status
+  attr_reader :author, :title, :status
+  attr_accessor :id
 
   def initialize(title, author)
     @title = title
     @author = author
-    @id = id
+    @id = nil
     @status = 'available'
   end
 
@@ -40,6 +41,7 @@ class Library
 
   def add_book(book)
     @books << book
+    book.id = Random.rand
   end
 
   def check_out_book(book_id, borrower)
