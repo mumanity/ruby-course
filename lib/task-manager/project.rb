@@ -1,26 +1,20 @@
-require 'pry-debugger'
+require 'pry'
 class TM::Project
   attr_reader :name, :id, :complete
-  @@id_count = 0
-  @@projects = []
 
-  def initialize(name)
+  def initialize(id, name)
     @name = name
-    @@id_count += 1
-    @id = @@id_count
-    @tasks = []
+    @id = id
     @completed = []
     @incomplete = []
-    @@projects << [@name, @id]
   end
 
   def self.list_projects
     @@projects
   end
 
-  def add_task(task)
-    task.project_id = self.id
-    @tasks << task
+  def self.add_task(task_id)
+    task_id = self.id
   end
 
   def complete

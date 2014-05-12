@@ -8,13 +8,13 @@ class TerminalClient
 
   def start
     puts 'Welcome to Project Manager Pro®. What can I do for you today?'
-    puts 'help - Show these commands again'
-    puts 'list - List all projects'
-    puts 'create NAME - Create a new project with name=NAME'
-    puts 'show PID - Show remaining tasks for project with id=PID'
-    puts 'history PID - Show completed tasks for project with id=PID'
-    puts 'add PID DESC PRIORITY - Add a new task to project with id=PID'
-    puts 'mark NAME - Mark task with id=TID as complete'
+    puts 'help                           Show these commands again'
+    puts 'list                           List all projects'
+    puts 'create NAME                    Create a new project with name=NAME'
+    puts 'show PID                       Show remaining tasks for project with id=PID'
+    puts 'history PID                    Show completed tasks for project with id=PID'
+    puts 'add PID NAME DESC PRIORITY     Add a new task to project with id=PID'
+    puts 'mark NAME                      Mark task with id=TID as complete'
     get_command
   end
 
